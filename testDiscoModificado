@@ -1,0 +1,43 @@
+package unlam.edu.ar.pg2;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import junit.framework.Assert;
+
+public class testDisco {
+
+	@Test
+	public void testQueCalculaElPerimetroInterior() {
+		Disco miDisco=new Disco(4.0,6.0);
+		
+		Double perimetroInteriorEsperado=25.13;
+		
+		Double perimetroInteriorObtenido=miDisco.calcularPerimetroInterior();
+		
+		Assert.assertEquals(perimetroInteriorEsperado, perimetroInteriorObtenido,0.01);
+	}
+	
+	@Test
+	public void testQueCalculaElPerimetroExterior() {
+		Disco miDisco=new Disco(4.0,6.0);
+		
+		Double perimetroExteriorEsperado=37.69;
+		
+		Double perimetroExteriorObtenido=miDisco.calcularPerimetroExterior();
+		
+		Assert.assertEquals(perimetroExteriorEsperado, perimetroExteriorObtenido,0.01);
+	}
+	
+	@Test
+	public void testQueCalculaLaSuperficieDelDisco(){
+		Disco miDisco=new Disco(4.0,6.0);
+		
+		Double superficieDelDiscoEsperado=145769.89;
+		Double superficieDelDiscoObtenido=miDisco.calcularSuperficieTotalDeUnDisco();
+		
+		Assert.assertEquals(superficieDelDiscoEsperado, superficieDelDiscoObtenido,0.01);
+	}
+
+}
